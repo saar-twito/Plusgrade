@@ -1,0 +1,56 @@
+.App {
+  font-family: sans-serif;
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.styled-table th,
+.styled-table td {
+  border: 1px solid #999;
+  padding: 8px;
+  text-align: left;
+}
+
+.styled-table th {
+  background-color: #ccc;
+}
+
+.nested-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0;
+}
+
+.nested-table th,
+.nested-table td {
+  border: 1px solid #999;
+  padding: 6px;
+}
+
+.nested-table th {
+  background-color: #ddd;
+}
+
+.row-active {
+  background-color: #c6efce;
+}
+
+.row-cancelled {
+  background-color: #f8d7da;
+}
+
+.row-offered {
+  background-color: #d0e3ff;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+  transition: 0.2s;
+}
