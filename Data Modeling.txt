@@ -1,0 +1,19 @@
+### 1. `product_assignment.json`
+
+This is a file that represents what was actually ordered within a customer’s reservation.
+Each object includes:
+
+* **`reservation_uuid`**: The reservation ID of the customer – a customer might order multiple products, so in this `.json` file, you may see the same `reservation_uuid` more than once. That means the customer ordered more than one product in their reservation.
+* **`id`**: A unique identifier for the product within the reservation (also used to link to the charge – `special_product_assignment_id`).
+* **`name`**: The name of the product, such as “Dinner” or “Breakfast”, etc.
+
+---
+
+### 2. `product_charges.json`
+
+This is a file that represents what was actually charged for each product in the reservation.
+Each object includes:
+
+* **`special_product_assignment_id`**: A reference to the `id` of the product from `product_assignment`.
+* **`active`**: Indicates whether the charge is active. If `true`, then yes, it’s active. If `false`, then it’s canceled. However, there are cases where a product was offered to the customer but is inactive or canceled – in this case, it’s considered “offered only”. And in this `.json` file, there will be no match because it’s not active or was canceled.
+* **`amount`**: The amount that was charged for this product.
